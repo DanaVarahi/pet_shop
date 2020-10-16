@@ -40,10 +40,7 @@ def get_pets_by_breed(pet_shop, breed):
 
 def find_pet_by_name(pet_shop, name):
     # pdb.set_trace()
-    named_pet = []
 
     for pet in pet_shop['pets']:
         if pet['name'] == name:
-            named_pet = pet
-
-    return named_pet
+            return pet
