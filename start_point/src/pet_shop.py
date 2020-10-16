@@ -28,7 +28,7 @@ def get_stock_count(pet_shop):
 
 
 def get_pets_by_breed(pet_shop, breed):
-    # pdb.set_trace()
+
     pets_of_breed = []
 
     for pet in pet_shop['pets']:
@@ -36,3 +36,14 @@ def get_pets_by_breed(pet_shop, breed):
             pets_of_breed.append(pet)
 
     return pets_of_breed
+
+
+def find_pet_by_name(pet_shop, name):
+    # pdb.set_trace()
+    named_pet = []
+
+    for pet in pet_shop['pets']:
+        if pet['name'] == name:
+            named_pet = pet
+
+    return named_pet
