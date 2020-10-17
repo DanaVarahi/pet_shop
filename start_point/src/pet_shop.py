@@ -52,15 +52,12 @@ def remove_pet_by_name(pet_shop, name):
             pet_shop['pets'].remove(pet)
 
 
-# def add_pet_to_stock(list, newpet):
-#     pdb.set_trace()
-#     list['pets'].append(newpet)
+def add_pet_to_stock(pet_shop, new_pet):
 
-# def get_customer_cash(customers, index):
-#     return customers[index]['cash']
+    pet_shop['pets'].append(new_pet)
+
 
 def get_customer_cash(customer):
-    # pdb.set_trace()
     return customer['cash']
 
 
