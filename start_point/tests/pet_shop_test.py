@@ -123,7 +123,6 @@ class TestPetShop(unittest.TestCase):
         pet = find_pet_by_name(self.cc_pet_shop, "Fred")
         self.assertIsNone(pet)
 
-    @unittest.skip("delete this line to run the test")
     def test_remove_pet_by_name(self):
         remove_pet_by_name(self.cc_pet_shop, "Arthur")
         pet = find_pet_by_name(self.cc_pet_shop, "Arthur")
@@ -165,7 +164,6 @@ class TestPetShop(unittest.TestCase):
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
         self.assertEqual(False, can_buy_pet)
 
-    @unittest.skip("delete this line to run the test")
     def test_customer_can_afford_pet__exact_funds(self):
         customer = self.customers[2]
         can_buy_pet = customer_can_afford_pet(customer, self.new_pet)
