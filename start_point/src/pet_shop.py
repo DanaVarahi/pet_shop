@@ -61,3 +61,7 @@ def find_pet_by_name(pet_shop, name):
 def get_customer_cash(customer):
     # pdb.set_trace()
     return customer['cash']
+
+
+def remove_customer_cash(customer, amount):
+    customer['cash'] -= amount
