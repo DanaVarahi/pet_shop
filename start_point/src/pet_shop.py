@@ -76,7 +76,7 @@ def add_pet_to_customer(customer, new_pet):
 
 
 def customer_can_afford_pet(customer, new_pet):
-    # pdb.set_trace()
+
     if customer['cash'] >= new_pet['price']:
         return True
     else:
@@ -85,9 +85,9 @@ def customer_can_afford_pet(customer, new_pet):
 
 def sell_pet_to_customer(pet_shop, pet, customer):
 
-    if customer_can_afford_pet(customer, pet) == True:
-        pet_shop['pets'].remove(pet)
-        customer['pets'].append(pet)
-        pet_shop['admin']['total_cash'] += pet['price']
-        customer['cash'] -= pet['price']
-        pet_shop['admin']['pets_sold'] += 1
+    if pet is not None and customer_can_afford_pet(customer, pet) == True:
+        remove_pet_by_name(pet_shop, pet["name"])
+        add_pet_to_customer(customer, pet)
+        remove_customer_cash(customer, pet["price"])
+        add_or_remove_cash(pet_shop, pet["price"])
+        increase_pets_sold(pet_shop, 1)
